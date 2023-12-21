@@ -1,0 +1,83 @@
+---
+# PostgreSQL Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:latest
+        env:
+        - name: POSTGRES_USER
+          value: username
+        - name: POSTGRES_PASSWORD
+          value: password
+        ports:
+        - containerPort: 5432
+---
+
+# PostgreSQL Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: LoadBalancer
+
+---
+
+# jihelper-api Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jihelper-api-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jihelper-api
+  template:
+    metadata:
+      labels:
+        app: jihelper-api
+    spec:
+      containers:
+      - name: jihelper-api
+        image: smbrine/fastapi-postgres-backend:latest
+        env:
+        - name: POSTGRES_HOST
+          value: postgres-service
+        ports:
+        - containerPort: 8001
+
+---
+
+# jihelper-api Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: jihelper-api-service
+spec:
+  selector:
+    app: jihelper-api
+  ports:
+    - protocol: TCP
+      port: 8001
+      targetPort: 8001
+  type: LoadBalancer
