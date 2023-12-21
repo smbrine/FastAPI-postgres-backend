@@ -3,7 +3,7 @@ venv/
 .env
 .gitignore
 combiner.py
+jihelper-api-deployment.yaml
 Makefile
 qodana.yaml
 README.md
-jihelper-api-deployment.yaml
