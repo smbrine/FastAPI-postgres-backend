@@ -3,12 +3,12 @@ FROM python:3.12-bookworm
 LABEL authors="Nick Smirnov"
 EXPOSE 8001
 
-ENV POSTGRES_USER 'username'
-ENV POSTGRES_PASSWORD 'password'
-ENV POSTGRES_HOST 'localhost'
+ENV POSTGRES_USER username
+ENV POSTGRES_PASSWORD password
+ENV POSTGRES_HOST localhost
 ENV POSTGRES_PORT 5432
-ENV POSTGRES_DB 'postgres'
-ENV SQL_DRIVER 'postgresql+asyncpg'
+ENV POSTGRES_DB postgres
+ENV SQL_DRIVER postgresql+asyncpg
 
 WORKDIR /src
 

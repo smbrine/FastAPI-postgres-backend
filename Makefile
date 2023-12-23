@@ -39,3 +39,8 @@ combine:
 docker: Dockerfile
 	docker build -t smbrine/fastapi-postgres-backend .
 	docker push smbrine/fastapi-postgres-backend
+
+list:
+	@echo "*make venv*:    creates a virtual environment for the project."
+	@echo "*make run*:     runs the project with default settings"
+	@echo "*make combine*: runs the script that combines all of the project files into one"

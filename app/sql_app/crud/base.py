@@ -41,6 +41,7 @@ class BaseCRUD:
         async with self.async_session() as session:
             session.add(_obj)
             await session.commit()
+            await session.refresh(_obj)
             return _obj
 
     # noinspection PyTypeChecker
@@ -114,16 +115,17 @@ class BaseCRUD:
         Args:
             _id (str): the ID of the record to delete
 
-        Raises:
-            ValueError: if the record was not found
+        Returns:
+            Union[str, bool]: a message indicating the status of the operation or a boolean value indicating success or failure
         """
         record = await self._get_one('id', _id)
         if record is None:
-            raise ValueError("Record not found")
+            return "Record not found"
 
         async with self.async_session() as session:
             await session.delete(record)
             await session.commit()
+            return True
 
     async def _get_paginated(self, page: int, page_size: int, order: str):
         """
