@@ -7,11 +7,11 @@ from app.sql_app.models.base import BaseModelDB
 class MessageContent(BaseModelDB):
     __tablename__ = "message_contents"
 
-    message_id = Column(String, ForeignKey('messages.id'))
+    message_id = Column(String, ForeignKey("messages.id"))
     content = Column(String, nullable=False)
     order = Column(Integer, nullable=False)
 
-    content_type = Column(String, default='text')
+    content_type = Column(String, default="text")
 
     message = relationship("Message", back_populates="contents")
 

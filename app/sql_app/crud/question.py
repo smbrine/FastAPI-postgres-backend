@@ -5,12 +5,17 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 from app.sql_app import models
 from app.sql_app.crud.base import BaseCRUD
 from app.sql_app.schemas import (
-    AnswerPublicSchema, QuestionAnswerSchema, QuestionCreateSchema, QuestionPublicSchema,
+    AnswerPublicSchema,
+    QuestionAnswerSchema,
+    QuestionCreateSchema,
+    QuestionPublicSchema,
 )
 
 
 class QuestionCRUD(BaseCRUD):
-    def __init__(self, async_session: async_sessionmaker[AsyncSession], model_class) -> None:
+    def __init__(
+        self, async_session: async_sessionmaker[AsyncSession], model_class
+    ) -> None:
         super().__init__(async_session, model_class)
         self.AnswerDB = None
 
@@ -20,6 +25,7 @@ class QuestionCRUD(BaseCRUD):
         :param db: AnswerCRUD database
         """
         from app.sql_app.crud.answer import AnswerCRUD
+
         if isinstance(db, AnswerCRUD):
             self.AnswerDB = db
         else:
@@ -32,12 +38,16 @@ class QuestionCRUD(BaseCRUD):
         :return: added to the db models.Question instance
         """
         new_question = models.Question(
-            id=str(uuid.uuid4()), title=question.title, description=question.description, from_id=question.from_id, )
+            id=str(uuid.uuid4()),
+            title=question.title,
+            description=question.description,
+            from_id=question.from_id,
+        )
         result = await self._create(new_question)
         return result
 
     async def get_question(self, question_id: str):
-        question = await self._get_one('id', question_id)
+        question = await self._get_one("id", question_id)
         question = question.scalars().one_or_none()
 
         if not question:
@@ -45,7 +55,7 @@ class QuestionCRUD(BaseCRUD):
 
         answer_data = None
         if question.answer_id:
-            answer = await self.AnswerDB._get_one('id', question.answer_id)
+            answer = await self.AnswerDB._get_one("id", question.answer_id)
             answer = answer.scalars().one_or_none()
 
             if answer:
@@ -54,11 +64,16 @@ class QuestionCRUD(BaseCRUD):
                 )
 
         return QuestionPublicSchema(
-            id=question.id, title=question.title, description=question.description, answer=answer_data,
-            admin_approved=question.admin_approved
+            id=question.id,
+            title=question.title,
+            description=question.description,
+            answer=answer_data,
+            admin_approved=question.admin_approved,
         )
 
-    async def get_paginated_questions(self, page: int, per_page: int, order: str = 'created_at'):
+    async def get_paginated_questions(
+        self, page: int, per_page: int, order: str = "created_at"
+    ):
         questions = await self._get_paginated(page, per_page, order)
         questions = questions.scalars().all()
         if not questions:
@@ -69,7 +84,7 @@ class QuestionCRUD(BaseCRUD):
         for question in questions:
             answer_data = None
             if question.answer_id:
-                answer = await self.AnswerDB._get_one('id', question.answer_id)
+                answer = await self.AnswerDB._get_one("id", question.answer_id)
 
                 answer = answer.scalars().one_or_none()
 
@@ -79,8 +94,13 @@ class QuestionCRUD(BaseCRUD):
                     )
 
             question_data = QuestionPublicSchema(
-                id=question.id, title=question.title, description=question.description, answer=answer_data,
-                admin_approved=question.admin_approved if question.admin_approved else False
+                id=question.id,
+                title=question.title,
+                description=question.description,
+                answer=answer_data,
+                admin_approved=question.admin_approved
+                if question.admin_approved
+                else False,
             )
             question_public_schemas.append(question_data)
 

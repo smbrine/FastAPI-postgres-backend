@@ -3,18 +3,18 @@ import os
 import sys
 
 
-def combine_files(root_dir, output_dir='combined'):
+def combine_files(root_dir, output_dir="combined"):
     # Create combined directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
 
     # Prepare the output file name with the current datetime
     datetime_str = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_file = os.path.join(output_dir, f'combined_{datetime_str}.py')
+    output_file = os.path.join(output_dir, f"combined_{datetime_str}.py")
 
-    with open(output_file, 'w') as outfile:
+    with open(output_file, "w") as outfile:
         for subdir, dirs, files in os.walk(root_dir):
             for file in files:
-                if file.endswith('.py') and not file.startswith('__init__'):
+                if file.endswith(".py") and not file.startswith("__init__"):
                     file_path = os.path.join(subdir, file)
                     # Write start tag
                     outfile.write(f"# STARTFILE {file_path}\n")

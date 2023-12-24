@@ -9,7 +9,9 @@ class Message(BaseModelDB):
 
     from_id = Column(Integer, index=True)
 
-    contents = relationship("MessageContent", back_populates="message", cascade="all, delete-orphan")
+    contents = relationship(
+        "MessageContent", back_populates="message", cascade="all, delete-orphan"
+    )
 
     def __repr__(self):
         return f"<Message from {self.from_id} sent {self.created_at}>"

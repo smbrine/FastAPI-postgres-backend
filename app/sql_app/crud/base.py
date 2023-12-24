@@ -91,7 +91,7 @@ class BaseCRUD:
         Returns:
             Model: the updated model object, or None if the record was not found
         """
-        obj = await self._get_one('id', _data.id)
+        obj = await self._get_one("id", _data.id)
 
         obj = obj.scalars().one_or_none()
 
@@ -99,7 +99,7 @@ class BaseCRUD:
             return False
 
         for key, value in _data.__dict__.items():
-            if key == 'id':
+            if key == "id":
                 continue
             setattr(obj, key, value)
 
@@ -118,7 +118,7 @@ class BaseCRUD:
         Returns:
             Union[str, bool]: a message indicating the status of the operation or a boolean value indicating success or failure
         """
-        record = await self._get_one('id', _id)
+        record = await self._get_one("id", _id)
         if record is None:
             return "Record not found"
 

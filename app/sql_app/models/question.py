@@ -12,8 +12,15 @@ class Question(BaseModelDB):
     description = Column(String, unique=False, index=True)
     admin_approved = Column(Boolean, default=False)
 
-    answer_id = Column(String, ForeignKey('answers.id', ondelete='CASCADE'), nullable=True, unique=True, )
+    answer_id = Column(
+        String,
+        ForeignKey("answers.id", ondelete="CASCADE"),
+        nullable=True,
+        unique=True,
+    )
 
     def __repr__(self):
-        return (f"<Question {self.title} from {self.from_id}. "
-                f"Is {'' if self.admin_approved else 'not'} approved by admin>")
+        return (
+            f"<Question {self.title} from {self.from_id}. "
+            f"Is {'' if self.admin_approved else 'not'} approved by admin>"
+        )

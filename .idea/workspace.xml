@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5bf2983c-0ce9-40d5-b701-8f55a10d8f09" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/routers/v1/logs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sql_app/crud/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/sql_app/schemas/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FastAPI-postgres-backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/main_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/main_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/v1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/v1/answers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/v1/answers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/v1/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/v1/messages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/v1/questions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/v1/questions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/crud/answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/crud/answer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/crud/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/crud/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/crud/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/crud/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/crud/message_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/crud/message_content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/crud/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/crud/question.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/answer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/answer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/message_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/message_content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/models/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/models/question.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sql_app/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/sql_app/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/combiner.py" beforeDir="false" afterPath="$PROJECT_DIR$/combiner.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZsFVBINiCtXBL3fZmXI6CdBhMf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Makefile Target.list.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nicksmirnov/Documents/jihelper/FastAPI-postgres-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ai.codium.settings.CodiumSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="list" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="list" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.list" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bf2983c-0ce9-40d5-b701-8f55a10d8f09" name="Changes" comment="" />
+      <created>1703202903781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703202903781</updated>
+      <workItem from="1703202906967" duration="33000" />
+      <workItem from="1703202940163" duration="73000" />
+      <workItem from="1703203020242" duration="717000" />
+      <workItem from="1703203745788" duration="11000" />
+      <workItem from="1703337991019" duration="963000" />
+      <workItem from="1703430646751" duration="812000" />
+      <workItem from="1703431460482" duration="1760000" />
+      <workItem from="1703433242947" duration="21000" />
+      <workItem from="1703433271078" duration="101000" />
+      <workItem from="1703433435112" duration="58000" />
+      <workItem from="1703433496832" duration="3441000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

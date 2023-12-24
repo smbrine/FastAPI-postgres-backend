@@ -31,7 +31,10 @@ venv: requirements.txt
 		)
 
 run: ./app/main.py
-	$(ACTIVATE_SCRIPT) && uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
+	$(ACTIVATE_SCRIPT) && uvicorn app.main:app --reload --host 0.0.0.0 --port 8002
+
+db: ./app/sql_app/create_db.py
+	$(ACTIVATE_SCRIPT) && python ./app/sql_app/create_db.py
 
 combine:
 	$(ACTIVATE_SCRIPT) && python combiner.py $(args)

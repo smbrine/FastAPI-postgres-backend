@@ -12,7 +12,9 @@ class Answer(BaseModelDB):
 
     admin_approved = Column(Boolean, default=False)
 
-    question_id = Column(String, ForeignKey('questions.id'), nullable=False, unique=True)
+    question_id = Column(
+        String, ForeignKey("questions.id"), nullable=False, unique=True
+    )
 
     def __repr__(self):
         return f"<Answer to question {self.question_id}>"

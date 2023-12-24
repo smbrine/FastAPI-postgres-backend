@@ -18,4 +18,4 @@ RUN python -m ensurepip --upgrade && pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8002"]
